@@ -10,6 +10,9 @@
 #   This code is a basic implementation of XOR encryption. It was created
 #   in response to: https://cryptopals.com/sets/1/challenges/2.
 #
+#   If, for some reason, you didn't want to use the built-in XOR operator ^,
+#   you could use the primitives & and | : ~(x & y) & (x | y).
+#
 #   No claims are made on the efficiency of this code.
 #
 #   Changelog:
