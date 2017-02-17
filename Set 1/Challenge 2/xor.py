@@ -21,8 +21,9 @@
 class XOR:
     def xor(self, message, key):
         """
-        Perform fixed-length XOR encryption and decryption. Raises an
-        exception if input lengths do not match or if there is no input.
+        Perform fixed-length XOR encryption and decryption. Input for
+        both message and key should be list of bytes. Raises an exception
+        if input lengths do not match or if there is no input.
         """
         if ((len(message) < 1 or len(key) < 1) or
             (len(message) != len(key))):
