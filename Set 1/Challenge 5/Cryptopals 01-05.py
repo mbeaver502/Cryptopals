@@ -15,19 +15,19 @@
 #
 #   Changelog:
 #       2017 03 21  Initial version.
+#                   Now with 50% fewer len() function calls!
 #
 #-------------------------------------------------------------------------
 
 def repeating_xor(_bytes, key):
-    result = [ ]
+    result      = [ ]
+    len_bytes   = len(_bytes)
+    len_key     = len(key)
     
-    if len(_bytes) >= len(key) and len(key) > 0: 
-        idx     = 0
-        bound   = len(_bytes)
-        mod     = len(key)
-        
-        while idx < bound:
-            result.append(_bytes[idx] ^ int(key[idx % mod].encode('hex'), 16))
+    if len_bytes >= len_key and len_key > 0: 
+        idx = 0
+        while idx < len_bytes:
+            result.append(_bytes[idx] ^ int(key[idx % len_key].encode('hex'), 16))
             idx += 1
 
     return result
